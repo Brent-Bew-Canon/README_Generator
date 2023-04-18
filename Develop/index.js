@@ -2,6 +2,8 @@
 // npm i inquirer@8.2.4
 
 // TODO: Create an array of questions for user input
+const fs = require('fs');
+const inquirer = require('inquirer');
 const questions = [
     {
         type: 'input',
@@ -49,20 +51,17 @@ const questions = [
         name: 'test',
     }
 ];
-const fs = require('fs');
-const inquirer = require('inquirer');
 
 inquirer
     .prompt(questions)
     .then((response) =>
-        console.log(response)
+        writeToFile("dude", JSON.stringify(response))
+        // console.log(JSON.stringify(response))
     );
-
-
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName + ".md", JSON.stringify(response), err => {
+    fs.writeFile(fileName + ".md", data, err => {
         if (err) {
             console.error("There's been an error: " + err)
         }
