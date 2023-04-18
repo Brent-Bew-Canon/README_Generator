@@ -1,9 +1,12 @@
 // TODO: Include packages needed for this application
 // npm i inquirer@8.2.4
 
-// TODO: Create an array of questions for user input
+
+const generate = require("./utils/generateMarkdown")
 const fs = require('fs');
 const inquirer = require('inquirer');
+
+// TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
