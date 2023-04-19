@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// Done: Include packages needed for this application
 // npm i inquirer@8.2.4
 
 
@@ -6,7 +6,9 @@ const generate = require("./utils/generateMarkdown")
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// TODO: Create an array of questions for user input
+// Done Create an array of questions for user input
+
+// TODO: Find a way to use inquirer to give you a list of options to select a license from.
 const questions = [
     {
         type: 'input',
@@ -49,9 +51,11 @@ const questions = [
         name: 'test',
     },
     {
-        type: 'input',
+        type: 'list',
         message: 'What type of license does this application have?',
-        name: 'license',
+        choices: generate.licenses,
+        name: 'license'
+
     }
 ];
 
@@ -59,7 +63,7 @@ inquirer
     .prompt(questions)
     .then((response) => {
         const htmlContent = generate.generateMarkdown(response);
-        writeToFile("dude", htmlContent);
+        writeToFile("README-Copy.md", htmlContent);
     });
 
 // TODO: Create a function to write README file
