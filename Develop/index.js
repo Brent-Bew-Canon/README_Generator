@@ -51,16 +51,16 @@ const questions = [
     {
         type: 'input',
         message: 'What type of license does this application have?',
-        name: 'test',
+        name: 'license',
     }
 ];
 
 inquirer
     .prompt(questions)
-    .then((response) =>
-        writeToFile("dude", JSON.stringify(response))
-        // console.log(JSON.stringify(response))
-    );
+    .then((response) => {
+        const htmlContent = generate.generateMarkdown(response);
+        writeToFile("dude", htmlContent);
+    });
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
