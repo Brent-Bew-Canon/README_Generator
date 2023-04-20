@@ -75,8 +75,6 @@ function writeToFile(fileName, data) {
     })
 }
 
-//TODO: Make license appear at the top of the readme
-//TODO: Generate Table of Contents
 
 // TODO: Create a function to initialize app
 function init() { }
