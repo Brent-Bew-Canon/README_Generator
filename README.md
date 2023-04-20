@@ -14,9 +14,5 @@ Use this command line tool to generate ReadMe files for any of your code project
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 
-## Live Link
-https://www.google.com
-
-
 ## Video Walkthrough
-![Weather App Screenshot](assets/weather%20screenshot.png)
+https://www.google.com
