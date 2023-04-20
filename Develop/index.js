@@ -8,7 +8,7 @@ const inquirer = require('inquirer');
 
 // Done Create an array of questions for user input
 
-// TODO: Find a way to use inquirer to give you a list of options to select a license from.
+// Done: Find a way to use inquirer to give you a list of options to select a license from.
 const questions = [
     {
         type: 'input',
@@ -74,6 +74,9 @@ function writeToFile(fileName, data) {
         }
     })
 }
+
+//TODO: Make license appear at the top of the readme
+//TODO: Generate Table of Contents
 
 // TODO: Create a function to initialize app
 function init() { }
