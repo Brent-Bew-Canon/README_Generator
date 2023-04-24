@@ -161,14 +161,15 @@ const generateMarkdown = function (data) {
 ${data.description}
 
 ## License
-${data.license.name}
+Licensed under the ${data.license}    
+          
 ${renderLicenseBadge(data.license)}
 
 ## Installation
 ${data.installation}
 
 ## Usage
-${data.use}
+${data.usage}
 
 ## Contributing
 ${data.contribution}
