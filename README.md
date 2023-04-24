@@ -7,7 +7,7 @@ A commandline tool to generate a ReadMe file for your code projects.
 Install node and the inquirer package version 8.2.4 via the command npm i inquirer@8.2.4 
 
 ## Usage
-Use this command line tool to generate ReadMe files for any of your code projects. Contains options to include almost any license known to man. 
+Use this command line tool to generate ReadMe files for any of your code projects. Contains options to include almost any license known to man. Use the command node index.js to start this app.
 
 
 ## License
@@ -15,4 +15,5 @@ Use this command line tool to generate ReadMe files for any of your code project
 
 
 ## Video Walkthrough
-https://www.google.com
+https://youtu.be/0CCtKv_I5q4
+

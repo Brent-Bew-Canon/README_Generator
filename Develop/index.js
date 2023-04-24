@@ -1,14 +1,12 @@
-// Done: Include packages needed for this application
-// npm i inquirer@8.2.4
+// Node packages needed: npm i inquirer@8.2.4
 
 
 const generate = require("./utils/generateMarkdown")
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// Done Create an array of questions for user input
 
-// Done: Find a way to use inquirer to give you a list of options to select a license from.
+// Array of prompts for the readme generator 
 const questions = [
     {
         type: 'input',
@@ -59,25 +57,23 @@ const questions = [
     }
 ];
 
-inquirer
-    .prompt(questions)
-    .then((response) => {
-        const htmlContent = generate.generateMarkdown(response);
-        writeToFile("README-Copy.md", htmlContent);
-    });
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((response) => {
+            const htmlContent = generate.generateMarkdown(response);
+            writeToFile("README-Copy.md", htmlContent);
+        });
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName + ".md", data, err => {
-        if (err) {
-            console.error("There's been an error: " + err)
-        }
-    })
+    // Writes the README file
+    function writeToFile(fileName, data) {
+        fs.writeFile(fileName, data, err => {
+            if (err) {
+                console.error("There's been an error: " + err)
+            }
+        })
+    }
 }
-
-
-// TODO: Create a function to initialize app
-function init() { }
 
 // Function call to initialize app
 init();
