@@ -4,6 +4,7 @@
 const generate = require("./utils/generateMarkdown")
 const fs = require('fs');
 const inquirer = require('inquirer');
+const lic = require("./utils/licenses");
 
 
 // Array of prompts for the readme generator 
@@ -51,7 +52,7 @@ const questions = [
     {
         type: 'list',
         message: 'What type of license does this application have?',
-        choices: generate.licenses,
+        choices: lic.licenses,
         name: 'license'
 
     }
